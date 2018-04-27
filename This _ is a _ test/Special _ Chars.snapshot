@@ -1,0 +1,72 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "e4c4a012-398b-3db4-8339-ab60c3a8ccfd",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Special Chars",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 967.0,
+      "y" : 195.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-stateful-analysis-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.7.0-SNAPSHOT"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "e4c4a012-398b-3db4-8339-ab60c3a8ccfd",
+      "identifier" : "d896cddb-1240-37fc-ba53-bd82a643a835",
+      "name" : "AttributeRollingWindow",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 549.0,
+        "y" : 170.0
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Value to track" : {
+          "displayName" : "Value to track",
+          "identifiesControllerService" : false,
+          "name" : "Value to track",
+          "sensitive" : false
+        },
+        "Time window" : {
+          "displayName" : "Time window",
+          "identifiesControllerService" : false,
+          "name" : "Time window",
+          "sensitive" : false
+        },
+        "Sub-window length" : {
+          "displayName" : "Sub-window length",
+          "identifiesControllerService" : false,
+          "name" : "Sub-window length",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
