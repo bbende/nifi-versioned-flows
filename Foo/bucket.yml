@@ -1,4 +1,7 @@
 flows:
+  bcf49462-dc28-44b8-ae25-b38f9428869a: {ver: 1, file: This___is___a_test_2.snapshot,
+    comments: Test, author: anonymous, created: 1540912849086, flowName: This / is
+      / a test 2}
   7493f451-ee06-4a00-bab9-619ca7418ad7: {ver: 1, file: B.snapshot}
   a2416190-e1f3-4ab4-99ca-9ed216cd5f0c: {ver: 4, file: This___is___a_test.snapshot,
     comments: Removing proc, author: anonymous, created: 1540912719496, flowName: This___is___a_test}
