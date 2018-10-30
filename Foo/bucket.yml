@@ -1,20 +1,4 @@
 flows:
-  d0676318-e021-498e-8ffd-18a52c702093: {ver: 1, file: This___is___a_test_22.snapshot,
-    comments: 'Test comment,  really really really  really really really  really really
-      really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  long', author: anonymous, created: 1540913935515, flowName: This
-      / is / a test 22, flowDesc: Test description really really really  really really
-      really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really  really really really  really
-      really really  really really really  really really really long}
   7493f451-ee06-4a00-bab9-619ca7418ad7: {ver: 1, file: B.snapshot}
   a2416190-e1f3-4ab4-99ca-9ed216cd5f0c: {ver: 4, file: This___is___a_test.snapshot,
     comments: Removing proc, author: anonymous, created: 1540912719496, flowName: This___is___a_test}
