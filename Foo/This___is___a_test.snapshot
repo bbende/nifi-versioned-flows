@@ -65,69 +65,6 @@
       "style" : { },
       "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
       "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.0-SNAPSHOT"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "0c912110-25e6-31a6-a388-56c223891b03",
-      "identifier" : "d671ef75-4160-3f52-8512-13975c016303",
-      "name" : "AttributesToJSON",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 924.0,
-        "y" : 486.0
-      },
-      "properties" : {
-        "Destination" : "flowfile-attribute",
-        "Null Value" : "false",
-        "Include Core Attributes" : "true"
-      },
-      "propertyDescriptors" : {
-        "attributes-to-json-regex" : {
-          "displayName" : "Attributes Regular Expression",
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-json-regex",
-          "sensitive" : false
-        },
-        "Destination" : {
-          "displayName" : "Destination",
-          "identifiesControllerService" : false,
-          "name" : "Destination",
-          "sensitive" : false
-        },
-        "Null Value" : {
-          "displayName" : "Null Value",
-          "identifiesControllerService" : false,
-          "name" : "Null Value",
-          "sensitive" : false
-        },
-        "Attributes List" : {
-          "displayName" : "Attributes List",
-          "identifiesControllerService" : false,
-          "name" : "Attributes List",
-          "sensitive" : false
-        },
-        "Include Core Attributes" : {
-          "displayName" : "Include Core Attributes",
-          "identifiesControllerService" : false,
-          "name" : "Include Core Attributes",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
-      "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
     "variables" : { }
