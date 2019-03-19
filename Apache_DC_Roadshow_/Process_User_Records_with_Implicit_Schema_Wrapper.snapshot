@@ -70,6 +70,41 @@
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : 1340.0,
+        "y" : 197.0
+      }, {
+        "x" : 1342.0,
+        "y" : 323.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "d1d85e3a-0621-3842-b490-55575333c724",
+        "id" : "3c06c7e9-b568-3d77-9b87-560d59eb9c48",
+        "name" : "users",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "6befedfd-cc5e-3576-95a3-6e4afbe648c7",
+      "identifier" : "c194ffa5-7f5e-312f-b502-03071ba2cf06",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "Response" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "6befedfd-cc5e-3576-95a3-6e4afbe648c7",
+        "id" : "a23d9648-ac8b-36de-969f-1c36cb0befbf",
+        "name" : "Pull data from randomuser.me",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -230,7 +265,7 @@
         "bucketId" : "de9f0a94-1327-45a3-bc34-6c83f05dbe3c",
         "flowId" : "cf4766cd-d164-48b7-9abc-55f1b8339ce5",
         "registryUrl" : "http://localhost:18080",
-        "version" : 1
+        "version" : 2
       }
     } ],
     "processors" : [ {
@@ -511,7 +546,7 @@
       "properties" : {
         "character-set" : "UTF-8",
         "File Size" : "0B",
-        "generate-ff-custom-text" : "name.title,name.first,name.last,email,registered\nmr,dennis,reyes,dennis.reyes@example.com,2012-04-10 01:54:19\nmiss,carole,gomez,carole.gomez@example.com,2002-12-17 22:15:49\nmr,todd,garcia,todd.garcia@example.com,2004-09-08 06:34:25\nmiss,kitty,hoffman,kitty.hoffman@example.com,2015-03-05 05:22:54\nmr,mason,spencer,mason.spencer@example.com,2006-07-22 14:56:34\nmr,tyler,hoffman,tyler.hoffman@example.com,2012-09-04 16:40:55\nmrs,tina,carroll,tina.carroll@example.com,2009-04-18 03:10:28\nmr,shane,kelly,shane.kelly@example.com,2009-06-23 22:37:58\nmr,jorge,cruz,jorge.cruz@example.com,2010-12-25 11:22:59\nmrs,juanita,thompson,juanita.thompson@example.com,2010-01-19 22:35:18",
+        "generate-ff-custom-text" : "name.title,name.first,name.last,email,registered\nmr,dennis,reyes,dennis.reyes@example.com,2012-04-10T01:54:19\nmiss,carole,gomez,carole.gomez@example.com,2002-12-17T22:15:49\nmr,todd,garcia,todd.garcia@example.com,2004-09-08T06:34:25\nmiss,kitty,hoffman,kitty.hoffman@example.com,2015-03-05T05:22:54\nmr,mason,spencer,mason.spencer@example.com,2006-07-22T14:56:34\nmr,tyler,hoffman,tyler.hoffman@example.com,2012-09-04T16:40:55\nmrs,tina,carroll,tina.carroll@example.com,2009-04-18T03:10:28\nmr,shane,kelly,shane.kelly@example.com,2009-06-23T22:37:58\nmr,jorge,cruz,jorge.cruz@example.com,2010-12-25T11:22:59\nmrs,juanita,thompson,juanita.thompson@example.com,2010-01-19T22:35:18",
         "Batch Size" : "1",
         "Unique FlowFiles" : "false",
         "Data Format" : "Text"
@@ -622,6 +657,221 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "No Retry", "Retry", "Original", "Failure" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "6befedfd-cc5e-3576-95a3-6e4afbe648c7",
+      "identifier" : "a23d9648-ac8b-36de-969f-1c36cb0befbf",
+      "name" : "Pull data from randomuser.me",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1167.0,
+        "y" : 17.0
+      },
+      "properties" : {
+        "use-etag" : "false",
+        "Proxy Type" : "http",
+        "Connection Timeout" : "5 secs",
+        "send-message-body" : "true",
+        "Always Output Response" : "false",
+        "etag-max-cache-size" : "10MB",
+        "Use Chunked Encoding" : "false",
+        "Follow Redirects" : "True",
+        "Remote URL" : "https://randomuser.me/api/?format=csv&results=10&inc=name,email,registered&nat=us",
+        "Content-Type" : "${mime.type}",
+        "Read Timeout" : "15 secs",
+        "Max Length To Put In Attribute" : "256",
+        "Digest Authentication" : "false",
+        "HTTP Method" : "GET",
+        "Add Response Headers to Request" : "false",
+        "Include Date Header" : "True",
+        "Penalize on \"No Retry\"" : "false"
+      },
+      "propertyDescriptors" : {
+        "Proxy Host" : {
+          "displayName" : "Proxy Host",
+          "identifiesControllerService" : false,
+          "name" : "Proxy Host",
+          "sensitive" : false
+        },
+        "Attributes to Send" : {
+          "displayName" : "Attributes to Send",
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Send",
+          "sensitive" : false
+        },
+        "Trusted Hostname" : {
+          "displayName" : "Trusted Hostname",
+          "identifiesControllerService" : false,
+          "name" : "Trusted Hostname",
+          "sensitive" : false
+        },
+        "use-etag" : {
+          "displayName" : "Use HTTP ETag",
+          "identifiesControllerService" : false,
+          "name" : "use-etag",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Proxy Type" : {
+          "displayName" : "Proxy Type",
+          "identifiesControllerService" : false,
+          "name" : "Proxy Type",
+          "sensitive" : false
+        },
+        "Basic Authentication Password" : {
+          "displayName" : "Basic Authentication Password",
+          "identifiesControllerService" : false,
+          "name" : "Basic Authentication Password",
+          "sensitive" : false
+        },
+        "Connection Timeout" : {
+          "displayName" : "Connection Timeout",
+          "identifiesControllerService" : false,
+          "name" : "Connection Timeout",
+          "sensitive" : false
+        },
+        "send-message-body" : {
+          "displayName" : "Send Message Body",
+          "identifiesControllerService" : false,
+          "name" : "send-message-body",
+          "sensitive" : false
+        },
+        "Always Output Response" : {
+          "displayName" : "Always Output Response",
+          "identifiesControllerService" : false,
+          "name" : "Always Output Response",
+          "sensitive" : false
+        },
+        "etag-max-cache-size" : {
+          "displayName" : "Maximum ETag Cache Size",
+          "identifiesControllerService" : false,
+          "name" : "etag-max-cache-size",
+          "sensitive" : false
+        },
+        "Put Response Body In Attribute" : {
+          "displayName" : "Put Response Body In Attribute",
+          "identifiesControllerService" : false,
+          "name" : "Put Response Body In Attribute",
+          "sensitive" : false
+        },
+        "Use Chunked Encoding" : {
+          "displayName" : "Use Chunked Encoding",
+          "identifiesControllerService" : false,
+          "name" : "Use Chunked Encoding",
+          "sensitive" : false
+        },
+        "Follow Redirects" : {
+          "displayName" : "Follow Redirects",
+          "identifiesControllerService" : false,
+          "name" : "Follow Redirects",
+          "sensitive" : false
+        },
+        "Remote URL" : {
+          "displayName" : "Remote URL",
+          "identifiesControllerService" : false,
+          "name" : "Remote URL",
+          "sensitive" : false
+        },
+        "Content-Type" : {
+          "displayName" : "Content-Type",
+          "identifiesControllerService" : false,
+          "name" : "Content-Type",
+          "sensitive" : false
+        },
+        "invokehttp-proxy-user" : {
+          "displayName" : "Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "invokehttp-proxy-user",
+          "sensitive" : false
+        },
+        "Read Timeout" : {
+          "displayName" : "Read Timeout",
+          "identifiesControllerService" : false,
+          "name" : "Read Timeout",
+          "sensitive" : false
+        },
+        "Max Length To Put In Attribute" : {
+          "displayName" : "Max Length To Put In Attribute",
+          "identifiesControllerService" : false,
+          "name" : "Max Length To Put In Attribute",
+          "sensitive" : false
+        },
+        "invokehttp-proxy-password" : {
+          "displayName" : "Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "invokehttp-proxy-password",
+          "sensitive" : false
+        },
+        "Proxy Port" : {
+          "displayName" : "Proxy Port",
+          "identifiesControllerService" : false,
+          "name" : "Proxy Port",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Digest Authentication" : {
+          "displayName" : "Use Digest Authentication",
+          "identifiesControllerService" : false,
+          "name" : "Digest Authentication",
+          "sensitive" : false
+        },
+        "HTTP Method" : {
+          "displayName" : "HTTP Method",
+          "identifiesControllerService" : false,
+          "name" : "HTTP Method",
+          "sensitive" : false
+        },
+        "Add Response Headers to Request" : {
+          "displayName" : "Add Response Headers to Request",
+          "identifiesControllerService" : false,
+          "name" : "Add Response Headers to Request",
+          "sensitive" : false
+        },
+        "Basic Authentication Username" : {
+          "displayName" : "Basic Authentication Username",
+          "identifiesControllerService" : false,
+          "name" : "Basic Authentication Username",
+          "sensitive" : false
+        },
+        "Include Date Header" : {
+          "displayName" : "Include Date Header",
+          "identifiesControllerService" : false,
+          "name" : "Include Date Header",
+          "sensitive" : false
+        },
+        "Penalize on \"No Retry\"" : {
+          "displayName" : "Penalize on \"No Retry\"",
+          "identifiesControllerService" : false,
+          "name" : "Penalize on \"No Retry\"",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "10 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
