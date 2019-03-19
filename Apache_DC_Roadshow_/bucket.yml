@@ -2,6 +2,6 @@ flows:
   cf4766cd-d164-48b7-9abc-55f1b8339ce5: {ver: 2, file: Process_User_Records_with_Implicit_Schema.snapshot}
   403fdc46-bf3b-42e2-b247-b4b1cd73f378: {ver: 2, file: Process_User_Records_with_Implicit_Schema_Wrapper.snapshot}
   b85e9e7d-9464-4cfd-b9e3-c12e1e89a9c0: {ver: 1, file: Process_User_Records_with_Inferred_Schema_Wrapper.snapshot}
-  30c005d9-1b5e-4141-bf3c-bdc5887a9cb1: {ver: 1, file: Process_User_Records_with_Inferred_Schema.snapshot}
+  30c005d9-1b5e-4141-bf3c-bdc5887a9cb1: {ver: 2, file: Process_User_Records_with_Inferred_Schema.snapshot}
 layoutVer: 1
 bucketId: de9f0a94-1327-45a3-bc34-6c83f05dbe3c

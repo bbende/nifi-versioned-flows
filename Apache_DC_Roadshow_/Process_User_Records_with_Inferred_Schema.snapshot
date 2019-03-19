@@ -998,7 +998,7 @@
         "y" : 239.0
       },
       "properties" : {
-        "/registered" : "${field.value:toDate('yyyy-MM-dd HH:mm:ss'):format('yyyy-MM-dd')}",
+        "/registered" : "${field.value:toDate(\"yyyy-MM-dd'T'HH:mm:ss\"):format('yyyy-MM-dd')}",
         "record-writer" : "9a9b7f14-7153-33a7-9d4c-7fcd95109d64",
         "record-reader" : "740e46d0-284f-35a3-90db-21c04cdfee5b",
         "replacement-value-strategy" : "literal-value"
