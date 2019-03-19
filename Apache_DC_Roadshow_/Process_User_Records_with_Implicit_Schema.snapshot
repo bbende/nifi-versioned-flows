@@ -500,7 +500,7 @@
       "name" : "AvroSchemaRegistry",
       "properties" : {
         "avro-reg-validated-field-names" : "true",
-        "user" : "{\n\"type\": \"record\",\n\"name\": \"user\",\n\"fields\": [\n { \"name\": \"title\", \"aliases\" : [ \"name.title\" ], \"type\": \"string\" },\n { \"name\": \"first_name\", \"aliases\" : [ \"name.first\" ], \"type\": \"string\" },\n { \"name\": \"last_name\", \"aliases\" : [ \"name.last\" ], \"type\": \"string\" },\n { \"name\": \"full_name\", \"type\": [\"string\", \"null\"] },\n { \"name\": \"gender\", \"type\": [\"string\", \"null\"] },\n { \"name\": \"email\", \"type\": \"string\" },\n { \"name\": \"registered\", \"type\": \"string\" }\n]\n}"
+        "user" : "{\n\"type\": \"record\",\n\"name\": \"user\",\n\"fields\": [\n { \"name\": \"title\", \"aliases\" : [ \"name.title\" ], \"type\": \"string\" },\n { \"name\": \"first_name\", \"aliases\" : [ \"name.first\" ], \"type\": \"string\" },\n { \"name\": \"last_name\", \"aliases\" : [ \"name.last\" ], \"type\": \"string\" },\n { \"name\": \"full_name\", \"type\": [\"string\", \"null\"] },\n { \"name\": \"gender\", \"type\": [\"string\", \"null\"] },\n { \"name\": \"email\", \"type\": \"string\" },\n { \"name\": \"registered\", \"aliases\" : [ \"registered.date\" ], \"type\": \"string\" }\n]\n}"
       },
       "propertyDescriptors" : {
         "avro-reg-validated-field-names" : {
@@ -878,7 +878,7 @@
       "type" : "INPUT_PORT"
     } ],
     "labels" : [ ],
-    "name" : "Process User Records",
+    "name" : "Process User Records w/ Implicit Schema",
     "outputPorts" : [ {
       "comments" : "",
       "componentType" : "OUTPUT_PORT",
@@ -1245,7 +1245,7 @@
         "y" : 239.0
       },
       "properties" : {
-        "/registered" : "${field.value:toDate('yyyy-MM-dd HH:mm:ss'):format('yyyy-MM-dd')}",
+        "/registered" : "${field.value:toDate(\"yyyy-MM-dd'T'HH:mm:ss\"):format('yyyy-MM-dd')}",
         "record-writer" : "d2506c93-ddb5-3ac3-8a43-2effef94760c",
         "record-reader" : "7651ee92-34de-362e-8015-6c093d16097e",
         "replacement-value-strategy" : "literal-value"
