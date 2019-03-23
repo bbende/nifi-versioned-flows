@@ -44,6 +44,7 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
         "groupId" : "d1d85e3a-0621-3842-b490-55575333c724",
         "id" : "3c06c7e9-b568-3d77-9b87-560d59eb9c48",
         "name" : "users",
@@ -79,6 +80,7 @@
       } ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
         "groupId" : "d1d85e3a-0621-3842-b490-55575333c724",
         "id" : "3c06c7e9-b568-3d77-9b87-560d59eb9c48",
         "name" : "users",
@@ -108,6 +110,7 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "comments" : "",
         "groupId" : "d1d85e3a-0621-3842-b490-55575333c724",
         "id" : "3c06c7e9-b568-3d77-9b87-560d59eb9c48",
         "name" : "users",
@@ -157,6 +160,7 @@
       "prioritizers" : [ ],
       "selectedRelationships" : [ "" ],
       "source" : {
+        "comments" : "",
         "groupId" : "d1d85e3a-0621-3842-b490-55575333c724",
         "id" : "3f7d397e-bdd6-3ec3-aeff-7764217c2598",
         "name" : "all users",
@@ -238,7 +242,7 @@
     "name" : "User Records / Implicit Schema",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 178.0,
+      "x" : 179.0,
       "y" : 27.0
     },
     "processGroups" : [ {
@@ -590,7 +594,7 @@
         }
       },
       "runDurationMillis" : 0,
-      "schedulingPeriod" : "5 sec",
+      "schedulingPeriod" : "500 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
