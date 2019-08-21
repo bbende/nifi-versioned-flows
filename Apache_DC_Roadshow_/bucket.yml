@@ -1,6 +1,8 @@
 flows:
   cf4766cd-d164-48b7-9abc-55f1b8339ce5: {ver: 2, file: Process_User_Records_with_Implicit_Schema.snapshot}
   403fdc46-bf3b-42e2-b247-b4b1cd73f378: {ver: 3, file: Process_User_Records_with_Implicit_Schema_Wrapper.snapshot}
+  ae57ad60-8eb7-41a4-9c78-d5b067bae4b0: {ver: 1, file: Test.snapshot, comments: '',
+    author: 'CN=bbende, OU=ApacheNiFi', created: 1566395887576, flowName: Test, flowDesc: Test}
   b85e9e7d-9464-4cfd-b9e3-c12e1e89a9c0: {ver: 2, file: Process_User_Records_with_Inferred_Schema_Wrapper.snapshot}
   30c005d9-1b5e-4141-bf3c-bdc5887a9cb1: {ver: 3, file: Process_User_Records_with_Inferred_Schema.snapshot,
     comments: Changing name of QueryRecord, author: anonymous, created: 1556907428158,
