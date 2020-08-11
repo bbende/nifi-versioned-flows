@@ -13,21 +13,21 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "afe6390c-28cf-3c3b-8441-1a293965f819",
+        "identifier" : "e72aebfd-3782-32ab-be40-bafde804fbc5",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Test 0.7",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 375.0,
-          "y" : 90.0
+          "x" : 370.0,
+          "y" : 33.0
         },
         "processGroups" : [ ],
         "processors" : [ {
           "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
           "bundle" : {
-            "artifact" : "nifi-amqp-nar",
+            "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
             "version" : "1.12.0-SNAPSHOT"
           },
@@ -35,95 +35,56 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "afe6390c-28cf-3c3b-8441-1a293965f819",
-          "identifier" : "13f662ca-d013-3b44-9a8f-be619233ff68",
-          "name" : "ConsumeAMQP",
+          "groupIdentifier" : "e72aebfd-3782-32ab-be40-bafde804fbc5",
+          "identifier" : "b897fb50-35ec-32e5-93ee-ab4f8e7d15dd",
+          "name" : "AttributesToCSV",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 365.0,
-            "y" : 33.0
+            "x" : 380.0,
+            "y" : 116.0
           },
           "properties" : {
-            "AMQP Version" : "0.9.1",
-            "ssl-client-auth" : "NONE",
-            "batch.size" : "10",
-            "Port" : "5672",
-            "cert-authentication" : "false",
-            "auto.acknowledge" : "false",
-            "Host Name" : "localhost"
+            "null-value" : "false",
+            "include-core-attributes" : "true",
+            "destination" : "flowfile-attribute",
+            "include-schema" : "false"
           },
           "propertyDescriptors" : {
-            "AMQP Version" : {
-              "displayName" : "AMQP Version",
+            "null-value" : {
+              "displayName" : "Null Value",
               "identifiesControllerService" : false,
-              "name" : "AMQP Version",
+              "name" : "null-value",
               "sensitive" : false
             },
-            "ssl-context-service" : {
-              "displayName" : "SSL Context Service",
-              "identifiesControllerService" : true,
-              "name" : "ssl-context-service",
+            "include-core-attributes" : {
+              "displayName" : "Include Core Attributes",
+              "identifiesControllerService" : false,
+              "name" : "include-core-attributes",
               "sensitive" : false
             },
-            "Virtual Host" : {
-              "displayName" : "Virtual Host",
+            "attributes-regex" : {
+              "displayName" : "Attributes Regular Expression",
               "identifiesControllerService" : false,
-              "name" : "Virtual Host",
+              "name" : "attributes-regex",
               "sensitive" : false
             },
-            "User Name" : {
-              "displayName" : "User Name",
+            "destination" : {
+              "displayName" : "Destination",
               "identifiesControllerService" : false,
-              "name" : "User Name",
+              "name" : "destination",
               "sensitive" : false
             },
-            "ssl-client-auth" : {
-              "displayName" : "Client Auth",
+            "include-schema" : {
+              "displayName" : "Include Schema",
               "identifiesControllerService" : false,
-              "name" : "ssl-client-auth",
+              "name" : "include-schema",
               "sensitive" : false
             },
-            "batch.size" : {
-              "displayName" : "Batch Size",
+            "attribute-list" : {
+              "displayName" : "Attribute List",
               "identifiesControllerService" : false,
-              "name" : "batch.size",
+              "name" : "attribute-list",
               "sensitive" : false
-            },
-            "Port" : {
-              "displayName" : "Port",
-              "identifiesControllerService" : false,
-              "name" : "Port",
-              "sensitive" : false
-            },
-            "cert-authentication" : {
-              "displayName" : "Use Client Certificate Authentication",
-              "identifiesControllerService" : false,
-              "name" : "cert-authentication",
-              "sensitive" : false
-            },
-            "auto.acknowledge" : {
-              "displayName" : "Auto-Acknowledge Messages",
-              "identifiesControllerService" : false,
-              "name" : "auto.acknowledge",
-              "sensitive" : false
-            },
-            "Host Name" : {
-              "displayName" : "Host Name",
-              "identifiesControllerService" : false,
-              "name" : "Host Name",
-              "sensitive" : false
-            },
-            "Queue" : {
-              "displayName" : "Queue",
-              "identifiesControllerService" : false,
-              "name" : "Queue",
-              "sensitive" : false
-            },
-            "Password" : {
-              "displayName" : "Password",
-              "identifiesControllerService" : false,
-              "name" : "Password",
-              "sensitive" : true
             }
           },
           "runDurationMillis" : 0,
@@ -131,7 +92,7 @@
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
-          "type" : "org.apache.nifi.amqp.processors.ConsumeAMQP",
+          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
